@@ -291,6 +291,9 @@ body {
   display: flex;
   gap: 39px;
 }
+.header__bottom .nav__link {
+  color: #302d2d;
+}
 .header__bottom .consultation__btn {
   padding: 16px 29px;
   background: #F86D6D;
@@ -437,6 +440,56 @@ body {
   width: 100%;
   margin: 0 auto;
 }
-@supports (-webkit-appearance:none){
 
+.hero {
+  background-color: #2378C9;
+  color: #ffffff;
+  position: relative;
+  background-image: url(../img/hero-girl.png);
+  background-repeat: no-repeat;
+  background-position: right 120px bottom -50px;
+}
+.hero__info {
+  max-width: 485px;
+  width: 100%;
+  padding: 179px 0 177px;
+}
+.hero__title {
+  font-size: 14px;
+  font-weight: 400;
+  color: #C5C1FE;
+  margin-bottom: 11px;
+  position: relative;
+}
+.hero__title::before {
+  position: absolute;
+  content: "";
+  width: 1000px;
+  height: 1px;
+  background: #C5C1FE;
+  left: -1016px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.hero__subtitle {
+  font-size: 62px;
+  font-weight: 700;
+  line-height: 105.7%;
+  margin-bottom: 21px;
+}
+.hero__sub-sub-title {
+  font-size: 18px;
+  margin-bottom: 26px;
+}
+.hero__appointment-btn {
+  color: #ffffff;
+  background: #5EB8F0;
+  padding: 18px 43px;
+  border-radius: 29.5px;
+  cursor: pointer;
+}
+@supports (-webkit-appearance:none){
+.hero{background-image:url(../img/hero-girl.webp)}
 }

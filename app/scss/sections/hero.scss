@@ -1,0 +1,47 @@
+.hero{
+  background-color: #2378C9;
+  color: #ffffff;
+  position: relative;
+  background-image: url(../img/hero-girl.png);
+  background-repeat: no-repeat;
+  background-position: right 120px bottom -50px;
+  &__info{
+    max-width: 485px;
+    width: 100%;
+    padding: 179px 0 177px;
+  }
+  &__title{
+    font-size: 14px;
+    font-weight: 400;
+    color: #C5C1FE;
+    margin-bottom: 11px;
+    position: relative;
+    &::before{
+      position: absolute;
+      content: "";
+      width: 1000px;
+      height: 1px;
+      background: #C5C1FE;
+      left: -1016px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &__subtitle{
+    font-size: 62px;
+    font-weight: 700;
+    line-height: 105.7%;
+    margin-bottom: 21px;
+  }
+  &__sub-sub-title{
+    font-size: 18px;
+    margin-bottom: 26px;
+  }
+  &__appointment-btn{
+    color: #ffffff;
+    background: $light-blue;
+    padding: 18px 43px;
+    border-radius: 29.5px;
+    cursor: pointer;
+  }
+}

@@ -79,6 +79,9 @@
       display: flex;
       gap: 39px;
     }
+    .nav__link{
+      color: $title;
+    }
     .consultation__btn{
       padding: 16px 29px;
       background: #F86D6D;
