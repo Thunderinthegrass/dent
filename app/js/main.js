@@ -14,96 +14,46 @@
 // }
 // scrollToLink();
 
-// function cityPopup() {
-//   const cityBtn = document.querySelector(".header__city-btn");
-//   const cityCorrectBtn = document.querySelector('.city__correct-btn');
-//   const citySelectBtn = document.querySelector('.city__select-btn');
-//   const cityPopupBody = document.querySelectorAll('.city--popup')
-//   const cityPopup = document.querySelector(".city__popup");
-//   const cityPopupCloseBtn = document.querySelector('.city__popup-close-btn');
-  
+//попапы
+const popups = document.querySelectorAll(".popup");
+const overlay = document.querySelector(".popup-overlay");
+const popupBtn = document.querySelectorAll(".popup-btn");
+const closeBtn = document.querySelectorAll(".close-btn");
 
-//   cityBtn.addEventListener("click", () => {
-//     cityPopup.classList.toggle("d-none");
-//   });
+function popup() {
+  popupBtn.forEach((elem) => {
+    elem.addEventListener("click", (e) => {
+      let data = e.currentTarget.getAttribute("data-path");
 
-//   cityPopupCloseBtn.addEventListener("click", () => {
-//     cityPopup.classList.toggle("d-none");
-//   });
+      popups.forEach((elem) => {
+        elem.classList.remove("popup--visible");
+      });
 
-//   cityCorrectBtn.addEventListener('click', () => {
-//     cityPopup.classList.toggle("d-none");
-//   })
+      document
+        .querySelector(`[data-target="${data}"]`)
+        .classList.add("popup--visible");
+      overlay.classList.add("popup-overlay--visible");
+    });
+  });
 
-//   citySelectBtn.addEventListener('click', () => {
-//     cityPopup.classList.toggle("d-none");
-//   })
+  overlay.addEventListener("click", (e) => {
+    document.body.classList.remove('ov-hidden');
+    if (e.target == overlay) {
+      overlay.classList.remove("popup-overlay--visible");
+      popups.forEach((el) => {
+        el.classList.remove("popup--visible");
+      });
+    }
+  });
 
-//   document.body.addEventListener('click', (e) => {
-//     if (!e.target.classList.contains('city--popup') && !cityPopup.classList.contains("d-none")) {
-//       cityPopup.classList.add("d-none");
-//     }
-//   })
-// }
-// cityPopup();
-
-// function cityModal() {
-//   const btns = document.querySelectorAll(".popup-path");
-//   const modalOverlay = document.querySelector(".modal-overlay ");
-//   const modals = document.querySelectorAll(".modal");
-//   const modalCloseBtn = document.querySelector(".modal-close-btn");
-//   const close = document.querySelectorAll(".close");
-
-//   btns.forEach((el) => {
-//     el.addEventListener("click", (e) => {
-//       document.body.classList.add('ov-hidden');
-//       let path = e.currentTarget.getAttribute("data-path");
-
-//       modals.forEach((el) => {
-//         el.classList.remove("modal--visible");
-//       });
-
-//       document
-//         .querySelector(`[data-target="${path}"]`)
-//         .classList.add("modal--visible");
-//         modalOverlay.classList.add("modal-overlay--visible");
-//     });
-//   });
-
-//   modalOverlay.addEventListener("click", (e) => {
-//     document.body.classList.remove('ov-hidden');
-//       if (e.target == modalOverlay) {
-//         modalOverlay.classList.remove("modal-overlay--visible");
-//         modals.forEach((el) => {
-//           el.classList.remove("modal--visible");
-//         });
-//       }
-//   });
-
-//   modalCloseBtn.addEventListener("click", (e) => {
-//     document.body.classList.remove('ov-hidden');
-
-//     modalOverlay.classList.remove("modal-overlay--visible");
-//     modals.forEach((el) => {
-//       el.classList.remove("modal--visible");
-//     });
-//   });
-// }
-// cityModal();
-
-// const swiper = new Swiper(".hero__slider", {
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-//   autoplay: {
-//     delay: 3000,
-//   },
-//   loop: "infinite",
-//   effect: "fade",
-//   pagination: {
-//     el: ".swiper-pagination",
-//     type: "bullets",
-//     clickable: true,
-//   },
-// });
+  closeBtn.forEach((elem) => {
+    document.body.classList.remove('ov-hidden');
+    elem.addEventListener("click", () => {
+      overlay.classList.remove("popup-overlay--visible");
+      popups.forEach((el) => {
+        el.classList.remove("popup--visible");
+      });
+    });
+  });
+}
+popup();

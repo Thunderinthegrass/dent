@@ -37,17 +37,17 @@
             </div>
             <div class="header__socials">
               <a href="#" class="header__socials-link">
-                <svg class="twitter-icon">
+                <svg class="twitter-icon" role="img" aria-label="ссылка на twitter.">
                   <use xlink:href="img/sprite/sprite.svg#twitter"></use>
                 </svg>
               </a>
               <a href="#" class="header__socials-link">
-                <svg class="instagram-icon">
+                <svg class="instagram-icon" role="img" aria-label="ссылка на instagram.">
                   <use xlink:href="img/sprite/sprite.svg#instagram"></use>
                 </svg>
               </a>
               <a href="#" class="header__socials-link">
-                <svg class="vk-icon">
+                <svg class="vk-icon" role="img" aria-label="ссылка на вконтакте.">
                   <use xlink:href="img/sprite/sprite.svg#vk"></use>
                 </svg>
               </a>
@@ -55,7 +55,48 @@
           </div>
         </div>
       </div>
+      <div class="header__bottom">
+        <div class="container">
+          <a href="#" class="header__logo">
+            <img src="img/logo.png" alt="логотип, ссылка на главную страницу.">
+          </a>
+          <nav class="header__nav nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a href="#" class="nav__link">Главная</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Услуги</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Наши специалисты</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Блог</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+            </ul>
+          </nav>
+          <button class="consultation__btn popup-btn" data-path="consultation-popup">
+            Получить консультацию
+          </button>
+        </div>
+      </div>
     </header>
+    <div class="popup-overlay">
+      <div class="popup consultation-popup" data-target="consultation-popup">
+        <img class="consultation-popup__logo" src="img/logo.png" alt="логотип компании.">
+        <button type="button" class="close-btn" aria-label="закрыть попап.">
+          <svg class="close-img">
+            <use xlink:href="img/sprite/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <h3 class="consultation-popup__title">Получить консультацию</h3>
+        <form action="" class="сonsultation-popup__form form">
+          <input type="text" class="form__input" placeholder="Ваше имя">
+          <input type="text" class="form__input" placeholder="Ваш телефон">
+          <button type="submit" class="form__submit-btn">
+            Отправить
+          </button>
+        </form>
+        <a href="#" class="privacy-policy-link">
+          Нажимая кнопку, я даю свое согласие на обработку моих персональных данных
+        </a>
+      </div>
+    </div>
     <script src="js/main.min.js"></script>
   </body>
 </html>

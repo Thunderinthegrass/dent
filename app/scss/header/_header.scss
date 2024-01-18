@@ -8,6 +8,7 @@
     font-size: 16px;
     .container{
       display: flex;
+      align-items: center;
       justify-content: space-between;
     }
     &-location{
@@ -18,6 +19,7 @@
     }
     &-right{
       display: flex;
+      align-items: center;
       gap: 55px;
       a{
         color: #ffffff;
@@ -33,6 +35,7 @@
         gap: 10px;
       }
     }
+
     .email-icon{
       width: 21px;
       height: 15px;
@@ -49,11 +52,40 @@
   }
   &__socials{
     display: flex;
+    align-items: center;
     gap: 31px;
+    &-link{
+      height: 22px;
+    }
     svg{
       width: 22px;
       height: 22px;
       fill: #ffffff;
+    }
+  }
+  &__bottom{
+    padding-top: 25px;
+    padding-bottom: 14px;
+    .container{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header__logo{
+      width: 172px;
+      margin-top: 12px;
+    }
+    .nav__list{
+      display: flex;
+      gap: 39px;
+    }
+    .consultation__btn{
+      padding: 16px 29px;
+      background: #F86D6D;
+      border-radius: 26px;
+      color: #ffffff;
+      font-size: 14px;
+      cursor: pointer;
     }
   }
 }
