@@ -2,9 +2,11 @@
   background-color: #2378C9;
   color: #ffffff;
   position: relative;
-  background-image: url(../img/hero-girl.png);
-  background-repeat: no-repeat;
-  background-position: right 120px bottom -50px;
+  .container{
+    background-image: url(../img/hero-girl.png);
+    background-repeat: no-repeat;
+    background-position: right -95px bottom -50px;
+  }
   &__info{
     max-width: 485px;
     width: 100%;

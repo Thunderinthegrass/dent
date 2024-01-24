@@ -1,4 +1,5 @@
 .header{
+  position: relative;
   &__top{
     background: $blue;
     color: #ffffff;
@@ -35,7 +36,6 @@
         gap: 10px;
       }
     }
-
     .email-icon{
       width: 21px;
       height: 15px;
@@ -89,6 +89,51 @@
       color: #ffffff;
       font-size: 14px;
       cursor: pointer;
+    }
+  }
+  @media(max-width: 1200px){
+    .header__logo{
+      width: 141px;
+    }
+    .consultation__btn{
+      padding: 13px 22px;
+      background: #F86D6D;
+      border-radius: 26px;
+      color: #ffffff;
+      font-size: 12px;
+      cursor: pointer;
+    }
+  }
+  @media(max-width: 1070px){
+    .nav__list{
+      gap: 30px;
+    }
+  }
+  @media(max-width: 1000px){
+    .nav{
+      position: absolute;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      background: $blue;
+      z-index: 1;
+    }
+    .nav__list{
+      flex-direction: column;
+      align-items: center;
+    }
+    .nav__link{
+      color: #ffffff;
+    }
+    &__bottom{
+      .container{
+        position: static;
+      }
+    }
+    .nav__title{
+      visibility: visible;
+      display: block;
     }
   }
 }

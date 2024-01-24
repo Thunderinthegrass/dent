@@ -1,0 +1,40 @@
+.menu-open-btn{
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background: $light-blue;
+  position: absolute;
+  visibility: hidden;
+  display: none;
+  svg{
+    width: 10px;
+    height: 10px;
+    fill: #ffffff;
+  }
+}
+.menu-close-btn{
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  display: none;
+  svg{
+    width: 16px;
+    height: 16px;
+    fill: #cc2424;
+  }
+}
+.nav__title{
+  visibility: hidden;
+  display: none;
+  font-size: 22px;
+  font-weight: 400;
+  color: #ffffff;
+  padding-top: 16px;
+  padding-left: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(217, 214, 214, 0.56);;
+}

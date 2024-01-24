@@ -173,6 +173,9 @@ body {
   display: block;
 }
 
+.header {
+  position: relative;
+}
 .header__top {
   background: #2378C9;
   color: #ffffff;
@@ -301,6 +304,54 @@ body {
   color: #ffffff;
   font-size: 14px;
   cursor: pointer;
+}
+@media (max-width: 1200px) {
+  .header .header__logo {
+    width: 141px;
+  }
+  .header .consultation__btn {
+    padding: 13px 22px;
+    background: #F86D6D;
+    border-radius: 26px;
+    color: #ffffff;
+    font-size: 12px;
+    cursor: pointer;
+  }
+}
+@media (max-width: 1070px) {
+  .header .nav__list {
+    gap: 30px;
+  }
+}
+@media (max-width: 1000px) {
+  .header .nav {
+    position: absolute;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: #2378C9;
+    z-index: 1;
+  }
+  .header .nav__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header .nav__link {
+    color: #ffffff;
+  }
+  .header__bottom .container {
+    position: static;
+  }
+  .header .nav__title {
+    visibility: visible;
+    display: block;
+  }
 }
 
 .popup-overlay {
@@ -445,9 +496,11 @@ body {
   background-color: #2378C9;
   color: #ffffff;
   position: relative;
+}
+.hero .container {
   background-image: url(../img/hero-girl.png);
   background-repeat: no-repeat;
-  background-position: right 120px bottom -50px;
+  background-position: right -95px bottom -50px;
 }
 .hero__info {
   max-width: 485px;
@@ -490,6 +543,79 @@ body {
   border-radius: 29.5px;
   cursor: pointer;
 }
+
+.menu-open-btn {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background: #5EB8F0;
+  position: absolute;
+  visibility: hidden;
+  display: none;
+}
+.menu-open-btn svg {
+  width: 10px;
+  height: 10px;
+  fill: #ffffff;
+}
+
+.menu-close-btn {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  display: none;
+}
+.menu-close-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: #cc2424;
+}
+
+.nav__title {
+  visibility: hidden;
+  display: none;
+  font-size: 22px;
+  font-weight: 400;
+  color: #ffffff;
+  padding-top: 16px;
+  padding-left: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(217, 214, 214, 0.56);
+}
 @supports (-webkit-appearance:none){
-.hero{background-image:url(../img/hero-girl.webp)}
+.hero .container{background-image:url(../img/hero-girl.webp)}
+}
+
+ @media (max-width: 1200px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 1070px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 1000px){
+
+@supports (-webkit-appearance:none){
+
+}
+
 }
