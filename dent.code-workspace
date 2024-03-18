@@ -7,5 +7,7 @@
 			"path": "../pirogi"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "dent"
+	}
 }

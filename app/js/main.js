@@ -57,3 +57,24 @@ function popup() {
   });
 }
 popup();
+
+//мобильное меню
+const menuOpenBtn = document.querySelector('.menu-open-btn');
+const menuCloseBtn = document.querySelector('.close-menu-btn');
+const mobileMenu = document.querySelector('.mobile-menu');
+
+const mobileMenuOpen = (elem) => {
+  elem.classList.add('active');
+}
+
+const mobileMenuClose = (elem) => {
+  elem.classList.remove('active');
+}
+
+menuOpenBtn.addEventListener('click', () => {
+  mobileMenuOpen(mobileMenu);
+});
+menuCloseBtn.addEventListener('click', () => {
+  mobileMenuClose(mobileMenu);
+});
+ 
