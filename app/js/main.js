@@ -62,6 +62,8 @@ popup();
 const menuOpenBtn = document.querySelector('.menu-open-btn');
 const menuCloseBtn = document.querySelector('.close-menu-btn');
 const mobileMenu = document.querySelector('.mobile-menu');
+const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
 
 const mobileMenuOpen = (elem) => {
   elem.classList.add('active');
@@ -74,7 +76,14 @@ const mobileMenuClose = (elem) => {
 menuOpenBtn.addEventListener('click', () => {
   mobileMenuOpen(mobileMenu);
 });
+
 menuCloseBtn.addEventListener('click', () => {
   mobileMenuClose(mobileMenu);
 });
+
+mobileMenuLinks.forEach((elem) => {
+  elem.addEventListener('click', () => {
+    mobileMenuClose(mobileMenu);
+  })
+})
  

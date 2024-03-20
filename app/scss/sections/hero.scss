@@ -2,15 +2,38 @@
   background-color: #2378C9;
   color: #ffffff;
   position: relative;
+  overflow: hidden;
   .container{
-    background-image: url(../img/hero-girl.png);
-    background-repeat: no-repeat;
-    background-position: right -95px bottom -50px;
+    display: flex;
+    position: static;
+    gap: 80px;
   }
   &__info{
     max-width: 485px;
     width: 100%;
     padding: 179px 0 177px;
+  }
+  &__img-wrapper{
+    position: relative;
+    .hero__img{
+      z-index: 1;
+      position: relative;
+    }
+    .hero__logo{
+      position: absolute;
+      opacity: 0.1;
+      top: 177px;
+      right: -84px;
+    }
+    .hero__img-circle{
+      position: absolute;
+      top: 329px;
+      right: 95px;
+      width: 218px;
+      height: 22px;
+      border-radius: 100%;
+      box-shadow: 0 4px 133px 239px rgba(255, 255, 255, 0.1);
+    }
   }
   &__title{
     font-size: 14px;
@@ -46,27 +69,94 @@
     border-radius: 29.5px;
     cursor: pointer;
   }
-  @media (max-width: 1200px) {
+  @media (max-width: 1170px) {
     .container{
-      background-position: right -150px bottom -50px;
+      gap: 30px;
     }
   }
   @media (max-width: 1100px) {
     .container{
-      background-position: right -230px bottom -50px;
+      gap: 0;
     }
   }
-  @media (max-width: 1000px) {
-    .container{
-      background-image: url(../img/hero-girl-mobile.png);
-      background-position: right 0px bottom -50px;
-    }
+  @media (max-width: 1050px) {
+    max-height: 445px;
     .hero__info{
       padding-top: 40px;
       padding-bottom: 35px;
+      max-width: 430px;
+    }
+    .hero__title{
+      font-size: 8px;
+      margin-bottom: 8px;
     }
     .hero__subtitle{
-      font-size: 51px;
+      font-size: 39px;
+      margin-bottom: 14px;
+    }
+    .hero__sub-sub-title{
+      font-size: 11px;
+    }
+    .hero__logo{
+      width: 270px;
+      top: 111px;
+      right: -67px;
+    }
+  }
+  @media (max-width: 799px){
+    max-height: none;
+    .container{
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+    .hero__info{
+      padding-bottom: 0;
+    }
+    .hero__img-wrapper{
+      max-width: 315px;
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 45px;
+    }
+    .hero__appointment-btn{
+      position: absolute;
+      bottom: 35px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      white-space: nowrap;
+    }
+  }
+  @media (max-width: 450px){
+    .hero__img-wrapper{
+      margin-left: 0;
+    }
+  }
+  @media (max-width: 375px){
+    height: calc(100svh - 101px);
+    .hero__sub-sub-title{
+      margin-bottom: 0;
+    }
+    .hero__img-wrapper{
+      max-width: 292px;
+      height: auto;
+    }
+    .hero__logo{
+      max-width: 205px;
+      width: 100%;
+    }
+  }
+  @media (max-width: 360px){
+    .hero__subtitle{
+      font-size: 25px;
+    }
+  }
+
+  @media (max-width: 345px){
+    .container{
+      padding-left: 15px;
+      padding-right: 15px;
     }
   }
 }
