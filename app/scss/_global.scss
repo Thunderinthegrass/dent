@@ -3,7 +3,7 @@
 }
 html,
 body {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-weight: 400;
   font-size: 18px;
 }
@@ -23,11 +23,11 @@ body {
 .container {
   max-width: 1250px;
   width: 100%;
-  padding: 0 25px;
+  padding: 0 20px;
   margin: 0 auto;
   position: relative;
 }
-.d-none{
+.d-none {
   display: none;
 }
 .modal-overlay {
@@ -67,4 +67,16 @@ body {
 
 .modal--visible {
   display: block;
+}
+.title {
+  font-size: 52px;
+  color: #302d2d;
+  font-weight: 400;
+  @media(max-width: 1000px) {
+    font-size: 30px;
+  }
+}
+.title-blue {
+  font-weight: 700;
+  color: #2378c9;
 }
