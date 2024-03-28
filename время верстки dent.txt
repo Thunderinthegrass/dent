@@ -10,3 +10,4 @@ hero 56
 адаптив hero 4 часа примерно
 services 1:20
 preferences 35
+specialists 1:05

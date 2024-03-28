@@ -1,0 +1,113 @@
+.price {
+  background: linear-gradient(222deg, #dfeefc 0%, #a7d2fb 100%);
+  padding: 75px 0 103px;
+  position: relative;
+  overflow: hidden;
+  .container {
+    position: static;
+  }
+  &__list-wrapper {
+    background: $light-blue;
+    max-width: 712px;
+    padding: 55px 60px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  &__title {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+  &__subtitle {
+    font-weight: 300;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 72px;
+  }
+  &__list {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 43px;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-image: url(../img/svg/price/line.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      left: 0;
+      bottom: -15px;
+    }
+  }
+  &__name {
+    font-weight: 300;
+    font-size: 18px;
+  }
+  &__price {
+    font-weight: 700;
+    font-size: 18px;
+  }
+  &__img-wrapper {
+    position: absolute;
+    right: 0;
+    top: 27px;
+    width: 831px;
+    height: 831px;
+  }
+  &__img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  @media (max-width: 1548px) {
+    &__img-wrapper{
+      right: -100px;
+    }
+  }
+  @media (max-width: 1348px) {
+    &__img-wrapper{
+      right: -200px;
+    }
+  }
+  @media (max-width: 1000px){
+    padding: 30px 0 35px;
+    &__img-wrapper{
+      display: none;
+    }
+    &__list-wrapper{
+      max-width: 100%;
+      padding: 25px 25px 40px;
+    }
+    &__title{
+      margin-bottom: 2px;
+    }
+    &__subtitle{
+      font-size: 7px;
+      margin-bottom: 32px;
+    }
+    &__list{
+      gap: 20px;
+    }
+    &__item{
+      &::after{
+        bottom: -2px;
+        background-repeat: repeat;
+      }
+    }
+    &__name {
+      font-size: 12px;
+    }
+    &__price {
+      font-size: 12px;
+    }
+  }
+}
