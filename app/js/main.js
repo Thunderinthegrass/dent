@@ -86,4 +86,15 @@ mobileMenuLinks.forEach((elem) => {
     mobileMenuClose(mobileMenu);
   })
 })
+
+window.onload = () => {
+  
+  if (document.body.clientWidth <= 1024) {
+    document.querySelector('.news__wrapper').classList.add('news-slider');
+
+    const newsSlider = new Swiper(".news-slider", {
+      
+    });
+  }
+}
  
