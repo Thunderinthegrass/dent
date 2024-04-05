@@ -87,14 +87,37 @@ mobileMenuLinks.forEach((elem) => {
   })
 })
 
-window.onload = () => {
-  
-  if (document.body.clientWidth <= 1024) {
-    document.querySelector('.news__wrapper').classList.add('news-slider');
+const newsWrapper = document.querySelector('.news__wrapper');
+const body = document.body;
+
+const isMobile = (elemWidth, elemModifable) => {
+  if (elemWidth.clientWidth <= 1024) {
+    elemModifable.classList.add('news-slider');
 
     const newsSlider = new Swiper(".news-slider", {
-      
     });
   }
+  else {
+    elemModifable.classList.remove('news-slider');
+  }
 }
+
+window.onload = () => {
+  isMobile(body, newsWrapper);
+}
+
+const reviewsSlider = new Swiper(".reviews__slider", {
+  navigation: {
+    nextEl: ".reviews-slider-button-next",
+    prevEl: ".reviews-slider-button-prev",
+  },
+  // effect: "fade",
+  // loop: "infinite",
+});
+
+// // Прослушиваем событие изменения размера страницы
+// window.addEventListener("resize", function() {
+//   isMobile(body, newsWrapper);
+  
+// }, false);
  
