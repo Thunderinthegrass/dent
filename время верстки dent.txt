@@ -13,3 +13,6 @@ preferences 35
 specialists 1:05
 price 50
 news 3 00
+reviews 2:20
+
+entry 1:02

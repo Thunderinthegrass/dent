@@ -1,0 +1,108 @@
+.entry {
+  overflow: hidden;
+  background: linear-gradient(
+    222deg,
+    #dfeefc 0%,
+    rgba(167, 210, 251, 0.92) 100%
+  );
+  .container{
+    display: flex;
+    align-items: start;
+    position: relative;
+    padding-top: 117px;
+    padding-bottom: 117px;
+    padding-left: 132px;
+  }
+  &__form {
+    text-align: center;
+    max-width: 425px;
+    width: 100%;
+    border-radius: 20px;
+    background: #ffffff;
+    padding: 58px 48px;
+    &-title {
+      font-size: 32px;
+      color: $title;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+    &-input {
+      padding: 20px 23px;
+      border: 1px solid #e4e4e4;
+      border-radius: 10px;
+      width: 100%;
+      color: $title;
+      margin-bottom: 20px;
+      outline: none;
+      &::placeholder {
+        font-weight: 400;
+        font-size: 18px;
+        color: #b9b9b9;
+      }
+    }
+    &-btn {
+      border-radius: 29px;
+      background: $light-blue;
+      width: 100%;
+      padding: 18px 0;
+      font-weight: 400;
+      font-size: 18px;
+      color: #ffffff;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+    &-agreement {
+      font-weight: 300;
+      font-size: 14px;
+      color: #747474;
+    }
+  }
+  &__img-wrapper{
+    width: 563px;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  @media(max-width: 1100px){
+    &__img-wrapper{
+      right: -40px;
+    }
+  }
+  @media(max-width: 1024px){
+    &__img-wrapper{
+      display: none;
+    }
+    .container{
+      padding: 46px 25px 70px;
+      justify-content: center;
+    }
+  }
+  @media(max-width: 768px){
+    &__form{
+      padding: 40px 35px;
+    }
+    &__form-title{
+      font-size: 23px;
+      margin-bottom: 21px;
+    }
+    &__form-input{
+      padding: 13px 16px;
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+    &__form-btn{
+      font-size: 13px;
+      padding: 13px 0;
+      margin-bottom: 15px;
+    }
+    &__form-agreement{
+      font-size: 10px;
+    }
+  }
+  @media(max-width: 320px){
+    &__form{
+      padding: 40px 20px;
+    }
+  }
+}

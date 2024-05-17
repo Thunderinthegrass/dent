@@ -1,5 +1,5 @@
 .header{
-  position: relative;
+  // position: relative;
   &__top{
     background: $blue;
     color: #ffffff;
@@ -66,6 +66,27 @@
   &__bottom{
     padding-top: 25px;
     padding-bottom: 14px;
+    transition: padding .3s;
+    &.sticky{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      background: #ffffff;
+      padding: 5px 0;
+      .header__logo{
+        width: 150px;
+      }
+      .consultation__btn{
+        padding: 12px 29px;
+      }
+      @media(max-width: 1000px) {
+        &.sticky{
+          position: static;
+        }
+      }
+    }
     .container{
       display: flex;
       justify-content: space-between;

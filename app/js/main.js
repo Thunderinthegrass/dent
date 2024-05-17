@@ -1,18 +1,41 @@
-// function scrollToLink() {
-//   const anchors = document.querySelectorAll('a[href*="#"]');
+function scrollToLink() {
+  const anchors = document.querySelectorAll('a[href*="#"]');
 
-//   for (let anchor of anchors) {
-//     anchor.addEventListener("click", function (event) {
-//       event.preventDefault();
-//       const blockID = anchor.getAttribute("href");
-//       document.querySelector("" + blockID).scrollIntoView({
-//         behavior: "smooth",
-//         block: "start",
-//       });
-//     });
-//   }
-// }
-// scrollToLink();
+  for (let anchor of anchors) {
+    anchor.addEventListener("click", function (event) {
+      event.preventDefault();
+      const blockID = anchor.getAttribute("href");
+      document.querySelector("" + blockID).scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  }
+}
+scrollToLink();
+
+//прилипание хедера
+// window.addEventListener('scroll', function() {
+  // console.log(scrollY + 'px');
+// });
+const headerBottom = document.querySelector('.header__bottom');
+
+const stickyHeader = (element) => {
+  element.classList.add('sticky');
+}
+const stickyHeaderRemove = (element) => {
+  element.classList.remove('sticky');
+}
+
+window.addEventListener('scroll', () => {
+  if (scrollY > 50) {
+    stickyHeader(headerBottom);
+  }
+  else {
+    stickyHeaderRemove(headerBottom);
+  }
+})
+
 
 //попапы
 const popups = document.querySelectorAll(".popup");

@@ -11,7 +11,7 @@
   </head>
 
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <div class="header__top">
         <div class="container">
           <div class="header__top-location">
@@ -67,17 +67,17 @@
           </svg>
         </button>
         <div class="container">
-          <a href="#" class="header__logo">
+          <a href="#header" class="header__logo">
             <img src="img/logo.png" alt="логотип, ссылка на главную страницу.">
           </a>
           <nav class="header__nav nav">
             <ul class="nav__list">
-              <li class="nav__item"><a href="#" class="nav__link">Главная</a></li>
-              <li class="nav__item"><a href="#" class="nav__link">Услуги</a></li>
-              <li class="nav__item"><a href="#" class="nav__link">Наши специалисты</a></li>
-              <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
-              <li class="nav__item"><a href="#" class="nav__link">Блог</a></li>
-              <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+              <li class="nav__item"><a href="#header" class="nav__link">Главная</a></li>
+              <li class="nav__item"><a href="#services" class="nav__link">Услуги</a></li>
+              <li class="nav__item"><a href="#specialists" class="nav__link">Наши специалисты</a></li>
+              <li class="nav__item"><a href="#reviews" class="nav__link">Отзывы</a></li>
+              <li class="nav__item"><a href="#blog" class="nav__link">Блог</a></li>
+              <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
             </ul>
           </nav>
           <button class="consultation__btn popup-btn" data-path="consultation-popup">
@@ -129,7 +129,7 @@
         </div>
         <ul class="mobile-menu__nav">
           <li class="nav__item"><a href="#" class="nav__link">Главная</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Услуги</a></li>
+          <li class="nav__item"><a href="#services" class="nav__link">Услуги</a></li>
           <li class="nav__item"><a href="#" class="nav__link">Наши специалисты</a></li>
           <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
           <li class="nav__item"><a href="#" class="nav__link">Блог</a></li>
@@ -160,7 +160,7 @@
         </div>
       </div>
     </section>
-    <section class="services">
+    <section class="services" id="services">
       <div class="container">
         <div class="services__img-wrapper">
           <img src="img/services/services-img.jpg" alt="" class="services__img">
@@ -221,7 +221,7 @@
         </div>
       </div>
     </section>
-    <section class="specialists">
+    <section class="specialists" id="specialists">
       <div class="container">
         <h2 class="specialists__title title">Наши специалисты</h2>
         <p class="specialists__subtitle">
@@ -455,7 +455,7 @@
         </div>
       </div>
     </section>
-    <section class="reviews">
+    <section class="reviews" id="reviews">
       <div class="container">
         <div class="reviews__slider">
           <div class="reviews__inner swiper-wrapper">
@@ -472,7 +472,7 @@
                     Отличная стоматология. Заболел зуб. Обратился в эту стоматологию. Качество обслуживания на высшем уровне. Сделали отбеливание зубов. Все отлично. Однозначно рекомендую.
                   </p>
                   <div class="reviews-item__bottom">
-                    <p class="reviews-item__name">Алина беляева</p>
+                    <p class="reviews-item__name">Алина Беляева</p>
                     <div class="reviews-item__socials">
                       <a href="#" class="reviews-item__socials-link">
                         <svg class="reviews-item__icon reviews-item__icon-twitter">
@@ -572,6 +572,30 @@
         </button>
       </div>
     </section>
+    <div class="entry">
+      <div class="container">
+        <form class="entry__form">
+          <h2 class="entry__form-title">
+            Записаться на прием
+          </h2>
+          <label for="name-input">
+            <input class="entry__form-input name-input" type="text" placeholder="Ваше имя">
+          </label>
+          <label for="phone-input">
+            <input class="entry__form-input phone-input" type="tel" placeholder="Ваш телефон">
+          </label>
+          <button type="submit" class="entry__form-btn">
+            Отправить заявку
+          </button>
+          <p class="entry__form-agreement">
+            Нажимая на кнопку, я даю согласие на обработку персональных данных
+          </p>
+        </form>
+        <div class="entry__img-wrapper">
+          <img class="entry__img" src="img/entry/entry-form--bg-img.png" alt="фоновое изображение.">
+        </div>
+      </div>
+    </div>
     <div class="popup-overlay">
       <div class="popup consultation-popup" data-target="consultation-popup">
         <img class="consultation-popup__logo" src="img/logo.png" alt="логотип компании.">
