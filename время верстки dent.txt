@@ -16,3 +16,4 @@ news 3 00
 reviews 2:20
 
 entry 1:02
+footer 1:45
